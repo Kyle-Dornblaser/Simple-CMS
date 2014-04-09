@@ -1,0 +1,22 @@
+[09-Apr-2014 00:19:33 UTC] PHP Parse error:  syntax error, unexpected 'title' (T_STRING), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 5
+[09-Apr-2014 00:21:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home5/tabletdi/public_html/dornblaser/group4/app/routes.php on line 59
+[09-Apr-2014 00:21:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home5/tabletdi/public_html/dornblaser/group4/app/routes.php on line 59
+[09-Apr-2014 00:34:29 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:35:00 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:35:03 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:35:15 UTC] PHP Parse error:  syntax error, unexpected 'master' (T_STRING), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 28
+[09-Apr-2014 00:35:28 UTC] PHP Parse error:  syntax error, unexpected 'master' (T_STRING), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 28
+[09-Apr-2014 00:35:34 UTC] PHP Parse error:  syntax error, unexpected 'master' (T_STRING), expecting ')' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 28
+[09-Apr-2014 00:39:18 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:38 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:41 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:43 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:44 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:55 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:39:57 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:40:12 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:40:41 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:40:44 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 17
+[09-Apr-2014 00:46:07 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
+[09-Apr-2014 00:46:25 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
+[09-Apr-2014 00:46:29 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
