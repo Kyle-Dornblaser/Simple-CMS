@@ -20,7 +20,7 @@ class PostController extends BaseController {
 		$post -> user_id = Auth::user() -> id;
 		$post -> save();
 		
-		return Redirect::route('posts/' . $post -> id);
+		return Redirect::route('showPost', array('id' =>  $post -> id));
 	}
 
 	/**

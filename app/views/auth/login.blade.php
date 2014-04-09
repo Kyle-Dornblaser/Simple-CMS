@@ -10,12 +10,12 @@
 		</legend>
 		<div class="form-group">
 			<div class="col-lg-12">
-				{{ Form::text('email', '', array('class' => 'form-control input-lg', 'placeholder' => 'Email')) }}
+				{{ Form::text('email', '', array('class' => 'form-control input-lg', 'placeholder' => 'Email', 'required' => '')) }}
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="col-lg-12">
-				{{ Form::password('password', array('class' => 'form-control input-lg', 'placeholder' => 'Password')) }}
+				{{ Form::password('password', array('class' => 'form-control input-lg', 'placeholder' => 'Password', 'required' => '')) }}
 			</div>
 		</div>
 		<div class="form-group">

@@ -63,6 +63,7 @@ class UserController extends BaseController {
 				$user -> first_name = $first_name;
 				$user -> last_name = $last_name;
 				$user -> password = $hashed_password;
+				$user -> role = 'User';
 				$user -> save();
 			} catch (\Illuminate\Database\QueryException $e) {
 				return Redirect::route('register') -> with(array(

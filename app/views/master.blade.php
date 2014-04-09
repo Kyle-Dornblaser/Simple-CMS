@@ -84,14 +84,26 @@
 				<div class="col-lg-4">
 					<div class="well">
 						<h4>Blog Search</h4>
-						<div class="input-group">
-							<input type="text" class="form-control">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									<span class="glyphicon glyphicon-search"></span>
-								</button> </span>
-						</div>
-						<!-- /input-group -->
+						<!--<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+						</button> </span>
+
+						</div>-->
+						<script>
+							(function() {
+								var cx = '015930986522473052671:sjhwn6wc6zu';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+							})();
+						</script>
+						<gcse:search></gcse:search>
 					</div>
 					<!-- /well -->
 					<div class="well">
