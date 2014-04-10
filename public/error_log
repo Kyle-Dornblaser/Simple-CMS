@@ -20,3 +20,31 @@
 [09-Apr-2014 00:46:07 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
 [09-Apr-2014 00:46:25 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
 [09-Apr-2014 00:46:29 UTC] PHP Parse error:  syntax error, unexpected 'control' (T_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/3183e5bb0e2bf00a916dc163e567896b on line 18
+[09-Apr-2014 21:17:19 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/c4efee6abd0d279e4e12dd09ec3050ff on line 26
+[09-Apr-2014 21:38:42 UTC] PHP Fatal error:  Call to undefined function containsTag() in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 30
+[09-Apr-2014 21:39:00 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 30
+[09-Apr-2014 21:52:32 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 26
+[09-Apr-2014 21:52:54 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 26
+[09-Apr-2014 21:53:30 UTC] PHP Fatal error:  Call to undefined function tag 2, tag 3, tag 1,  tag 2,  tag 3,  tag 4,  tag 5, test,  testing,  test 2, () in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 24
+[09-Apr-2014 22:04:00 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 127664128 bytes) in /home5/tabletdi/public_html/dornblaser/group4/app/models/Post.php on line 16
+[09-Apr-2014 22:04:07 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 127664128 bytes) in /home5/tabletdi/public_html/dornblaser/group4/app/models/Post.php on line 16
+[09-Apr-2014 22:05:53 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 127664128 bytes) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 21
+[09-Apr-2014 22:10:41 UTC] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 21
+[09-Apr-2014 22:10:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 21
+[09-Apr-2014 22:11:18 UTC] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 21
+[09-Apr-2014 22:11:22 UTC] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/294453a697dd7868d482d2e227b30eb2 on line 21
+[09-Apr-2014 23:33:56 UTC] PHP Parse error:  syntax error, unexpected ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/8390dc442a2b184b0f283ea554943ced on line 25
+[09-Apr-2014 23:38:25 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/8390dc442a2b184b0f283ea554943ced on line 25
+[09-Apr-2014 23:38:26 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/8390dc442a2b184b0f283ea554943ced on line 25
+[10-Apr-2014 01:48:32 UTC] PHP Fatal error:  Call to undefined method Illuminate\Routing\Router::to() in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 211
+[10-Apr-2014 01:48:51 UTC] PHP Fatal error:  Call to undefined method Illuminate\Routing\Router::to() in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 211
+[10-Apr-2014 01:49:05 UTC] PHP Fatal error:  Call to undefined method Illuminate\Routing\Router::to() in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 211
+[10-Apr-2014 02:15:51 UTC] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: post' in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php:16
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(16): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/home5/tabletdi...', 16, Array)
+#1 [internal function]: PostController->create()
+#2 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('create', Array)
+#4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PostController), Object(Illuminate\Routing\Route), 'create')
+#5 /home5/tabletdi/public_html in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 16
+[10-Apr-2014 02:15:51 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 16

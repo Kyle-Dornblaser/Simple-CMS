@@ -47,3 +47,4 @@ Stack trace:
 [08-Apr-2014 23:37:52 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home5/tabletdi/public_html/dornblaser/group4/app/database/migrations/2014_04_08_232759_create_comments.php on line 15
 [08-Apr-2014 23:39:59 UTC] PHP Fatal error:  Class 'CreateUsers' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297
 [08-Apr-2014 23:56:19 UTC] PHP Fatal error:  Class 'CreateTags' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297
+[09-Apr-2014 21:22:54 EST] PHP Fatal error:  Class 'CreateComments' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297

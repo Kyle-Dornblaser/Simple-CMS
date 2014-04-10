@@ -20,12 +20,12 @@ class UserController extends BaseController {
 		);
 
 		if (Auth::attempt($user, Input::has('remember'))) {
-			return Redirect::route('home') -> with(array(
+			return Redirect::intended('/') -> with(array(
 				'alert' => 'You are successfully logged in.',
 				'alert-class' => 'alert-success'
 			));
 		} else {
-			return Redirect::route('login') -> with(array(
+			return Redirect::intended('login') -> with(array(
 				'alert' => 'Your username/password combination was incorrect.',
 				'alert-class' => 'alert-danger'
 			)) -> withInput();

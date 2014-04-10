@@ -1,13 +1,18 @@
 @extends('master')
 
 @section('title')
-For Beginners
+{{ $post -> title }}
 @stop
 
 @section('content')
 <h1>{{ $post -> title }}</h1>
 <p class="lead">
 	by <a href="">{{ $post -> user_id }}</a>
+	@if(Auth::check())
+		@if(Auth::user() -> role == 'Admin')
+		<a href="{{ route('editPost', array('id' => $post -> id)) }}" class="pull-right">Edit</a>
+		@endif
+	@endif
 </p>
 <hr>
 <p>
@@ -16,6 +21,13 @@ For Beginners
 <hr>
 
 {{ $post -> content }}
+
+<hr>
+<p>Tags:
+@foreach($post -> tags as $tag)
+	{{$tag -> name}}
+@endforeach
+</p>
 
 <hr>
 

@@ -5,14 +5,14 @@ Edit Post
 @stop
 
 @section('content')
-<script src="ckeditor/ckeditor.js"></script>
-{{ Form::open( array('action' => 'PostController@save')) }}
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+{{ Form::open( array('url' => route('editPost', array('id' => $post -> id)))) }}
 <div class="form-group">
-	{{ Form::text('title', '', array('class' => 'form-control input-lg', 'placeholder' => 'Post Title')) }}
+	{{ Form::text('title', $post -> title, array('class' => 'form-control input-lg', 'placeholder' => 'Post Title')) }}
 </div>
 <div class="form-group">
-	<textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="20">
-
+	<textarea class="ckeditor" cols="80" id="editor1" name="content" rows="20">
+		{{ $post -> content }}
 	</textarea>
 </div>
 <div class="form-group">
@@ -21,7 +21,7 @@ Edit Post
 </div>
 <div class="form-group">
 	{{ Form::label('category', 'Category', array('control-label')) }}
-	{{ Form::select('size', array('L' => 'Large', 'S' => 'Small'), null, array('class' => 'form-control')) }}
+	{{ Form::select('category', array('L' => 'Large', 'S' => 'Small'), $post -> category, array('class' => 'form-control')) }}
 </div>
 <div class="form-group">
 	<button type="submit" class="btn btn-primary">
