@@ -48,3 +48,73 @@ Stack trace:
 #4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PostController), Object(Illuminate\Routing\Route), 'create')
 #5 /home5/tabletdi/public_html in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 16
 [10-Apr-2014 02:15:51 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 16
+[10-Apr-2014 20:27:55 EST] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/91ab9e7ed212254f0021894b3fcfcb4e on line 9
+[10-Apr-2014 20:28:47 EST] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/91ab9e7ed212254f0021894b3fcfcb4e on line 9
+[10-Apr-2014 20:28:59 EST] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/91ab9e7ed212254f0021894b3fcfcb4e on line 9
+[10-Apr-2014 20:29:03 EST] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/91ab9e7ed212254f0021894b3fcfcb4e on line 9
+[10-Apr-2014 21:52:40 EST] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/91ab9e7ed212254f0021894b3fcfcb4e on line 32
+[10-Apr-2014 22:02:52 EST] PHP Parse error:  syntax error, unexpected ',' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/a9e11ef11e291c76948f14b5d238c821 on line 16
+[11-Apr-2014 14:19:25 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:19:39 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:19:41 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:19:48 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:19:50 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:23:18 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[11-Apr-2014 14:23:43 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e6fc54f48adcfce2a55722e13811638f on line 19
+[13-Apr-2014 14:26:09 America/New_York] PHP Fatal error:  Call to undefined function tagString() in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/e609596cbacd3be290016d94d0b7013e on line 19
+[13-Apr-2014 14:55:34 America/New_York] PHP Fatal error:  Call to undefined method Illuminate\Database\Eloquent\Collection::save() in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 23
+[13-Apr-2014 15:19:02 America/New_York] PHP Fatal error:  Call to undefined function findOrFail() in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 29
+[13-Apr-2014 15:28:23 America/New_York] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class ModelNotFoundException does not exist' in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php:309
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(309): ReflectionParameter->getClass()
+#1 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(293): Illuminate\Exception\Handler->hints(Object(ReflectionFunction), Object(ReflectionException))
+#2 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(230): Illuminate\Exception\Handler->handlesException(Object(Closure), Object(ReflectionException))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(145): Illuminate\Exception\Handler->callCustomHandlers(Object(ReflectionException))
+#4 /home5/tabletdi/public_html/d in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php on line 309
+[13-Apr-2014 15:28:23 America/New_York] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class ModelNotFoundException does not exist' in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php:309
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(309): ReflectionParameter->getClass()
+#1 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(293): Illuminate\Exception\Handler->hints(Object(ReflectionFunction), Object(Symfony\Component\Debug\Exception\FatalErrorException))
+#2 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(230): Illuminate\Exception\Handler->handlesException(Object(Closure), Object(Symfony\Component\Debug\Exception\FatalErrorException))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php(145): Illuminate\Exception\Handler->callCustomHa in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Exception/Handler.php on line 309
+[13-Apr-2014 15:35:01 America/New_York] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: value' in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php:24
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(24): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/home5/tabletdi...', 24, Array)
+#1 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(57): PostController->updatePost(Object(Post))
+#2 [internal function]: PostController->save(Object(Post))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('save', Array)
+#5 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illum in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:35:01 America/New_York] PHP Fatal error:  Cannot access empty property in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:35:34 America/New_York] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: value' in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php:24
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(24): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/home5/tabletdi...', 24, Array)
+#1 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(57): PostController->updatePost(Object(Post))
+#2 [internal function]: PostController->save(Object(Post))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('save', Array)
+#5 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illum in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:35:34 America/New_York] PHP Fatal error:  Cannot access empty property in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:35:58 America/New_York] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: value' in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php:24
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(24): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/home5/tabletdi...', 24, Array)
+#1 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(58): PostController->updatePost(Object(Post))
+#2 [internal function]: PostController->save(Object(Post))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('save', Array)
+#5 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illum in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:35:58 America/New_York] PHP Fatal error:  Cannot access empty property in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:36:13 America/New_York] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: value' in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php:24
+Stack trace:
+#0 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(24): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/home5/tabletdi...', 24, Array)
+#1 /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php(58): PostController->updatePost(Object(Post))
+#2 [internal function]: PostController->save(Object(Post))
+#3 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#4 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('save', Array)
+#5 /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illum in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:36:13 America/New_York] PHP Fatal error:  Cannot access empty property in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 24
+[13-Apr-2014 15:45:04 America/New_York] PHP Fatal error:  Call to undefined function find() in /home5/tabletdi/public_html/dornblaser/group4/app/controllers/PostController.php on line 29
+[13-Apr-2014 16:45:32 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/50b77e4e83eb440aed526cc713fd8a77 on line 36
+[13-Apr-2014 16:48:43 America/New_York] PHP Parse error:  syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/50b77e4e83eb440aed526cc713fd8a77 on line 40
+[13-Apr-2014 16:49:01 America/New_York] PHP Parse error:  syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/50b77e4e83eb440aed526cc713fd8a77 on line 40
+[13-Apr-2014 16:49:14 America/New_York] PHP Parse error:  syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING) in /home5/tabletdi/public_html/dornblaser/group4/app/storage/views/50b77e4e83eb440aed526cc713fd8a77 on line 40

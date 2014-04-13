@@ -6,7 +6,7 @@ Create Post
 
 @section('content')
 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-{{ Form::open( array('action' => 'PostController@create')) }}
+{{ Form::open( array('action' => 'PostController@save')) }}
 <div class="form-group">
 	{{ Form::text('title', '', array('class' => 'form-control input-lg', 'placeholder' => 'Post Title')) }}
 </div>

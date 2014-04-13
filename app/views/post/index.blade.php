@@ -7,7 +7,7 @@
 @section('content')
 <h1>{{ $post -> title }}</h1>
 <p class="lead">
-	by <a href="">{{ $post -> user_id }}</a>
+	by <a href="">{{ $post -> user -> first_name . ' ' . $post -> user -> last_name }}</a>
 	@if(Auth::check())
 		@if(Auth::user() -> role == 'Admin')
 		<a href="{{ route('editPost', array('id' => $post -> id)) }}" class="pull-right">Edit</a>
@@ -25,7 +25,7 @@
 <hr>
 <p>Tags:
 @foreach($post -> tags as $tag)
-	{{$tag -> name}}
+	{{$tag -> id}}
 @endforeach
 </p>
 
@@ -56,4 +56,8 @@
 <p>
 	Don't listen to this guy, any blog with the categories 'dinosaurs, spaceships, fried foods, wild animals, alien abductions, business casual, robots, and fireworks' has true potential.
 </p>
+<script>
+	SyntaxHighlighter.all();
+</script>
+
 @stop

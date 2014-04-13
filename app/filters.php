@@ -45,10 +45,32 @@ Route::filter('auth.basic', function() {
  |--------------------------------------------------------------------------
  |
  */
- 
+
 Route::filter('admin', function() {
-	if (Auth::user()->role != 'Admin')
+	if (Auth::user() -> role != 'Admin')
 		return Redirect::to('/');
+});
+
+Route::filter('premium', function($route) {
+	//passed in Post from the route
+	$post = $route->getParameter('post');
+	$premium = false;
+	foreach ($post -> tags as $tag) {
+		// checks to see if the post is for premium users only
+		if ($tag -> id == 'premium') {
+			$premium = true;
+		}
+	}
+	if ($premium) {
+		// checks to make sure the user has role of either Admin or Premium
+		if (Auth::guest() || Auth::user() -> role == 'User')
+			return Redirect::to('/premium');
+	}
+});
+
+Route::filter('standard', function() {
+	if (Auth::user() -> role == 'Premium' || Auth::user() -> role == 'Admin')
+			return Redirect::to('/');
 });
 
 /*

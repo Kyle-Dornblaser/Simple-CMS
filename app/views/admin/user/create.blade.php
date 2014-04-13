@@ -1,12 +1,16 @@
 @extends('master')
 
+@section('title')
+Create User
+@stop
+
 @section('content')
 
 <div class="well">
-	{{ Form::open(array('action' => 'UserController@register', 'id' => 'registerForm', 'class' => 'form-horizontal')) }}
+	{{ Form::open( array('action' => 'UserController@create', 'class' => 'form-horizontal')) }}
 	<fieldset>
 		<legend>
-			<h2>Account Registration</h2>
+			<h2>Create User</h2>
 		</legend>
 		<div class="form-group">
 			<div class="col-lg-6">
@@ -23,21 +27,19 @@
 		</div>
 		<div class="form-group">
 			<div class="col-lg-12">
-				{{ Form::password('password', array('class' => 'form-control input-lg', 'placeholder' => 'Password', 'required' => '')) }}
+				{{ Form::password('password', array('class' => 'form-control input-lg', 'placeholder' => 'Password')) }}
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="col-lg-12">
-				{{ Form::password('confirm_password', array('class' => 'form-control input-lg', 'placeholder' => 'Confirm Password', 'required' => '')) }}
+				{{ Form::label('role', 'Role', array('control-label')) }}
+				{{ Form::select('role', array('User' => 'User', 'Premium' => 'Premium', 'Admin' => 'Admin'), 'User', array('class' => 'form-control')) }}
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="col-lg-12">
-				<button class="btn btn-default btn-lg" type="reset">
-					Cancel
-				</button>
-				<button type="submit" class="btn btn-primary btn-lg">
-					Sign up!
+				<button type="submit" class="btn btn-primary">
+					Save
 				</button>
 			</div>
 		</div>

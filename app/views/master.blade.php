@@ -59,13 +59,16 @@
 		</div>
 		<!-- /well -->
 		<div class="well">
-			<h4>Side Widget Well</h4>
-			<p>
-				Bootstrap's default wells work great for side widgets! What is a widget anyways...?
-			</p>
+			<h4>Theme Switcher</h4>
+			<form id="switchform">
+				<select name="switchcontrol" size="1" onChange="chooseStyle(this.options[this.selectedIndex].value, 60)">
+					<option value="none" selected="selected">Light Theme</option>
+					<option value="cyborg">Dark Theme</option>
+				</select>
+			</form>
 		</div>
 		<!-- /well -->
 	</div>
 </div>
-
+<script src="{{ asset('js/css-switcher.js') }}" type="text/javascript"></script>
 @stop

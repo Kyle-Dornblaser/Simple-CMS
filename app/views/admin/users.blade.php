@@ -1,34 +1,32 @@
 @extends('master-sans')
 
 @section('title')
-Post Administration
+User Administration
 @stop
 
 @section('content')
-<h1>Post Administration</h1>
-<hr>
 
+<h1>User Administration</h1>
 <table class="table">
 	<tr>
 		<th> ID </th>
-		<th> Title </th>
-		<th> Category </th>
-		<th> Author </th>
+		<th> First Name </th>
+		<th> Last Name </th>
+		<th> Role </th>
 		<th> Actions </th>
 	</tr>
-	@foreach($posts as $post)
+	@foreach($users as $user)
 	<tr>
-		<td> {{ $post -> id }} </td>
-		<td> <a href="/show/{{ $post -> id }}">{{ $post -> title }}</a> </td>
-		<td> {{ $post -> category_id }} </td>
-		<td> {{ $post -> user_id }} </td>
+		<td> {{ $user -> id }} </td>
+		<td> {{ $user -> first_name }} </td>
+		<td> {{ $user -> last_name }} </td>
+		<td> {{ $user -> role }} </td>
 		<td>
-			<a href="{{URL::to('showPost', array('id' => $post -> id)) }}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-			<a href="" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+			<a href="{{ route('editUser', array('id' => $user -> id)) }}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="{{ route('deleteUser', array('id' => $user -> id) )}}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 		</td>
 	</tr>
 	@endforeach
 </table>
 
-<hr>
 @stop

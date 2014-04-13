@@ -5,25 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-
-		<script type="text/javascript" src="http://168.28.21.121:8081/team3/4-1-2014%20Archive/syntax/scripts/shCore.js"></script>
-		<script type="text/javascript" src="http://168.28.21.121:8081/team3/4-1-2014%20Archive/syntax/scripts/shBrushCss.js"></script>
-		<script type="text/javascript" src="http://168.28.21.121:8081/team3/4-1-2014%20Archive/syntax/scripts/shBrushXml.js"></script>
-		<link type="text/css" rel="stylesheet" href="http://168.28.21.121:8081/team3/4-1-2014%20Archive/syntax/styles/shCoreDefault.css"/>
-
+		<meta name="google-site-verification" content="kP8GyZyu-LT5YP1EtDiTfqAU2F5oYFGG_hTM_r4KIgo" />
 		<title>Coding Tuts - @yield('title')</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/bootstrap-readable.min.css') }}" rel="stylesheet">
+		<link rel="alternate stylesheet" type="text/css" media="screen" title="cyborg" href="{{ asset('css/bootstrap-cyborg.min.css') }}" />
 
 		<!-- Add custom CSS here -->
 		<link href="{{ asset('css/blog-post.css') }}" rel="stylesheet">
 
-		<style>
+		<!--<style>
 			h1 a, h1 a:hover {
 				color: #000;
 			}
-		</style>
+		</style>-->
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -65,10 +61,16 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li class="">
-									{{ HTML::linkRoute('create', 'Create Post') }}
+									{{ HTML::linkRoute('createPost', 'Create Post') }}
 								</li>
 								<li class="">
-									{{ HTML::linkRoute('postAdmin', 'Moderate Posts') }}
+									{{ HTML::linkRoute('createUser', 'Create User') }}
+								</li>
+								<li class="">
+									{{ HTML::linkRoute('modPosts', 'Moderate Posts') }}
+								</li>
+								<li class="">
+									{{ HTML::linkRoute('modUsers', 'Moderate Users') }}
 								</li>
 							</ul>
 						</li>
@@ -118,7 +120,9 @@
 		<script src="{{ asset('js/jquery-1.10.2.js') }}"></script>
 		<script src="{{ asset('js/bootstrap.js') }}"></script>
 		<script type="text/javascript">
-			SyntaxHighlighter.all();
+			$(".alert-dismissable").delay(5000).fadeOut("slow", function() {
+				$(this).remove();
+			});
 		</script>
 	</body>
 

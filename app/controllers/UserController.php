@@ -88,4 +88,84 @@ class UserController extends BaseController {
 		));
 	}
 
+	public function listUsers() {
+		$users = User::all() -> reverse();
+		return View::make('admin.users', compact('users'));
+	}
+
+	public function create() {
+		$first_name = Input::get('first_name');
+		$last_name = Input::get('last_name');
+		$email = Input::get('email');
+		$password = Input::get('password');
+		$role = Input::get('role');
+		
+		$hashed_password = Hash::make($password);
+
+		$user = new User;
+		$user -> id = $email;
+		$user -> first_name = $first_name;
+		$user -> last_name = $last_name;
+		$user -> password = $hashed_password;
+		$user -> role = $role;
+		$user -> save();
+
+		return Redirect::route('modUsers') -> with(array(
+			'alert' => 'Successfully created user',
+			'alert-class' => 'alert-success'
+		));
+	}
+
+	public function edit(User $user) {
+		return View::make('admin.user.edit', compact('user'));
+	}
+
+	public function save(User $user) {
+		$email = Input::get('email');
+		$first_name = Input::get('first_name');
+		$last_name = Input::get('last_name');
+		$password = Input::get('password');
+		$role = Input::get('role');
+
+		$user -> id = $email;
+		$user -> first_name = $first_name;
+		$user -> last_name = $last_name;
+
+		if (!empty($password)) {
+			$hashed_pw = Hash::make($password);
+			$user -> password = $hashed_pw;
+		}
+
+		$user -> role = $role;
+		$user -> save();
+
+		return Redirect::route('modUsers') -> with(array(
+			'alert' => 'Successfully edited user',
+			'alert-class' => 'alert-success'
+		));
+	}
+
+	public function showDelete(User $user) {
+		return View::make('admin.user.delete', compact('user'));
+	}
+
+	public function delete(User $user) {
+
+		try {
+			$userId = $user -> id;
+			$user -> delete();
+
+		} catch(\Illuminate\Database\QueryException $e) {
+			return Redirect::route('modUsers') -> with(array(
+				'alert' => 'Error: Failed to delete user.',
+				'alert-class' => 'alert-danger'
+			));
+		}
+
+		return Redirect::route('modUsers') -> with(array(
+			'alert' => "You have successfully deleted user $userId.",
+			'alert-class' => 'alert-success'
+		));
+	}
+
 }

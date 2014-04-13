@@ -48,3 +48,14 @@ Stack trace:
 [08-Apr-2014 23:39:59 UTC] PHP Fatal error:  Class 'CreateUsers' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297
 [08-Apr-2014 23:56:19 UTC] PHP Fatal error:  Class 'CreateTags' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297
 [09-Apr-2014 21:22:54 EST] PHP Fatal error:  Class 'CreateComments' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297
+[12-Apr-2014 13:57:23 America/New_York] PHP Fatal error:  Class 'Hase' not found in /home5/tabletdi/public_html/dornblaser/group4/app/tests/UserControllerTest.php on line 14
+[12-Apr-2014 13:59:31 America/New_York] PHP Fatal error:  Class 'Hase' not found in /home5/tabletdi/public_html/dornblaser/group4/app/tests/UserControllerTest.php on line 14
+[13-Apr-2014 12:35:29 America/Denver] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Undefined index: argv' in phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:57
+Stack trace:
+#0 phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php(57): Composer\Util\ErrorHandler::handle(8, 'Undefined index...', 'phar:///home5/t...', 57, Array)
+#1 phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(111): Symfony\Component\Console\Input\ArgvInput->__construct()
+#2 phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/src/Composer/Console/Application.php(83): Symfony\Component\Console\Application->run(NULL, Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/bin/composer(43): Composer\Console\Application->run()
+#4 /home5/tabletdi/p in phar:///home5/tabletdi/public_html/dornblaser/group4/composer.phar/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php on line 57
+[13-Apr-2014 14:41:46 America/New_York] PHP Parse error:  syntax error, unexpected '$table' (T_VARIABLE) in /home5/tabletdi/public_html/dornblaser/group4/app/database/migrations/2014_04_13_143529_create_creditcards.php on line 19
+[13-Apr-2014 17:01:56 America/New_York] PHP Fatal error:  Class 'CreateCreditcards' not found in /home5/tabletdi/public_html/dornblaser/group4/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php on line 297

@@ -17,7 +17,7 @@ Edit Post
 </div>
 <div class="form-group">
 	{{ Form::label('tags', 'Tags', array('control-label')) }}
-	{{ Form::text('tags', '', array('class' => 'form-control input-lg', 'placeholder' => 'Comma separated tags. Ex: HTML, CSS, PHP')) }}
+	{{ Form::text('tags', PostController::tagsString($post), array('class' => 'form-control input-lg', 'placeholder' => 'Comma separated tags. Ex: HTML, CSS, PHP')) }}
 </div>
 <div class="form-group">
 	{{ Form::label('category', 'Category', array('control-label')) }}
