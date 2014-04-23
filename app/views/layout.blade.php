@@ -38,13 +38,10 @@
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#about">About</a>
+							{{ HTML::linkRoute('premium', 'Premium') }}
 						</li>
 						<li>
-							<a href="#services">Services</a>
-						</li>
-						<li>
-							<a href="#contact">Contact</a>
+							{{ HTML::linkRoute('contact', 'Contact') }}
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -119,11 +116,13 @@
 		<!-- JavaScript -->
 		<script src="{{ asset('js/jquery-1.10.2.js') }}"></script>
 		<script src="{{ asset('js/bootstrap.js') }}"></script>
+		<script src="{{ asset('js/css-switcher.js') }}" type="text/javascript"></script>
 		<script type="text/javascript">
 			$(".alert-dismissable").delay(5000).fadeOut("slow", function() {
 				$(this).remove();
 			});
 		</script>
+		@yield('scripts')
 	</body>
 
 </html>

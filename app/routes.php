@@ -4,84 +4,220 @@
  |--------------------------------------------------------------------------
  | Application Routes
  |--------------------------------------------------------------------------
- |
- | Here is where you can register all of the routes for an application.
- | It's a breeze. Simply tell Laravel the URIs it should respond to
- | and give it the Closure to execute when that URI is requested.
- |
  */
 
+// Route model-binding: Binds the Models to a route name
 Route::model('post', 'Post');
 Route::model('user', 'User');
+Route::model('comment', 'Comment');
+Route::model('tag', 'Tag');
 
-Route::get('/', array('as' => 'home', function() {
-	$posts = Post::all() -> reverse();
-	return View::make('home', compact('posts'));
-}));
+// Get home page
+Route::get('/', array(
+  'as' => 'home',
+  function() {
+    $posts = Post::all() -> reverse();
+    return View::make('home', compact('posts'));
+  }
 
-Route::get('contact', function() {
-	return View::make('contact');
-});
+));
 
-Route::get('post/{post}', array('before' => 'premium', 'as' => 'showPost', 'uses' => 'PostController@show'));
+// Get contact page
+Route::get('contact', array(
+  'as' => 'contact',
+  function() {
+    return View::make('contact');
+  }
 
+));
+// POST from contact page
+Route::post('contact', 'ContactController@send');
+
+// Get a single post's page
+Route::get('post/{post}', array(
+  'before' => 'premium',
+  'as' => 'showPost',
+  'uses' => 'PostController@show'
+));
+
+// Get a list of all posts under a single tag
+Route::get('tag/{tag}', array(
+  'as' => 'showTag',
+  'uses' => 'TagController@show'
+));
+
+// Get a list of all posts under a single author
+Route::get('user/{user}', array(
+  'as' => 'showUser',
+  'uses' => 'UserController@showPosts'
+));
+
+// Must not be logged in to access these routes
 Route::group(array('before' => 'guest'), function() {
-	Route::get('login', array('as' => 'login', 'uses' => 'UserController@showLogin'));
 
-	Route::post('login', 'UserController@login');
+  // Get the login page
+  Route::get('login', array(
+    'as' => 'login',
+    'uses' => 'UserController@showLogin'
+  ));
 
-	Route::get('register', array('as' => 'register', 'uses' => 'UserController@showRegister'));
+  // POST from login page
+  Route::post('login', 'UserController@login');
 
-	Route::post('register', 'UserController@register');
+  // Get the register page
+  Route::get('register', array(
+    'as' => 'register',
+    'uses' => 'UserController@showRegister'
+  ));
+
+  // POST from register page
+  Route::post('register', 'UserController@register');
 });
 
+// Must be logged in before accessing these routes
 Route::group(array('before' => 'auth'), function() {
-	Route::get('logout', array('as' => 'logout', 'uses' => 'UserController@logout'));
 
-	Route::group(array('before' => 'standard'), function() {
-		Route::get('premium', array('as' => 'premium', function() {
-			return View::make('premium');
-		}));
-		Route::post('premium', array('as' => 'premium', 'uses' => 'CreditCardController@save'));
-	});
+  // Get the logout action
+  Route::get('logout', array(
+    'as' => 'logout',
+    'uses' => 'UserController@logout'
+  ));
 
-	Route::group(array('before' => 'admin'), function() {
-		Route::group(array('prefix' => 'admin'), function() {
-			Route::group(array('prefix' => 'post'), function() {
-				Route::get('create', array('as' => 'createPost', function() {
-					return View::make('admin.post.create');
-				}));
+  // POST from a comment form
+  Route::post('comment', 'CommentController@save');
 
-				Route::post('create', 'PostController@save');
+  // Must have a standard user role before accessing these routes
+  Route::group(array('before' => 'standard'), function() {
 
-				Route::get('edit/{post}', array('as' => 'editPost', 'uses' => 'PostController@edit'));
+    // Get the premium page
+    Route::get('premium', array(
+      'as' => 'premium',
+      function() {
+        return View::make('premium');
+      }
 
-				Route::post('edit/{post}', array('as' => 'editPost', 'uses' => 'PostController@save'));
+    ));
 
-				Route::get('delete/{post}', array('as' => 'deletePost', 'uses' => 'PostController@showDelete'));
+    // POST from premium page
+    Route::post('premium', array(
+      'as' => 'premium',
+      'uses' => 'CreditCardController@save'
+    ));
+  });
 
-				Route::post('delete/{post}', array('as' => 'deletePost', 'uses' => 'PostController@delete'));
-			});
+  // Must have an admin user role before accessing these routes
+  Route::group(array('before' => 'admin'), function() {
 
-			Route::group(array('prefix' => 'user'), function() {
-				Route::get('create', array('as' => 'createUser', function() {
-					return View::make('admin.user.create');
-				}));
+    // Route prefix of admin
+    Route::group(array('prefix' => 'admin'), function() {
 
-				Route::post('create', 'UserController@create');
+      // Route prefix of post
+      Route::group(array('prefix' => 'post'), function() {
 
-				Route::get('edit/{user}', array('as' => 'editUser', 'uses' => 'UserController@edit'));
+        // Get create post page
+        Route::get('create', array(
+          'as' => 'createPost',
+          function() {
+            return View::make('admin.post.create');
+          }
 
-				Route::post('edit/{user}', array('as' => 'editUser', 'uses' => 'UserController@save'));
+        ));
 
-				Route::get('delete/{user}', array('as' => 'deleteUser', 'uses' => 'UserController@showDelete'));
+        // POST from create post page
+        Route::post('create', 'PostController@save');
 
-				Route::post('delete/{user}', array('as' => 'deleteUser', 'uses' => 'UserController@delete'));
-			});
+        // Get edit post page
+        Route::get('edit/{post}', array(
+          'as' => 'editPost',
+          'uses' => 'PostController@edit'
+        ));
 
-			Route::get('posts', array('as' => 'modPosts', 'uses' => 'PostController@listPosts'));
+        // POST from edit post page
+        Route::post('edit/{post}', array(
+          'as' => 'editPost',
+          'uses' => 'PostController@save'
+        ));
 
-			Route::get('users', array('as' => 'modUsers', 'uses' => 'UserController@listUsers'));
-		});
-	});
+        // Get delete post page
+        Route::get('delete/{post}', array(
+          'as' => 'deletePost',
+          'uses' => 'PostController@showDelete'
+        ));
+
+        // POST from delete post page
+        Route::post('delete/{post}', array(
+          'as' => 'deletePost',
+          'uses' => 'PostController@delete'
+        ));
+      });
+
+      // Route prefix of user
+      Route::group(array('prefix' => 'user'), function() {
+
+        // Get create user page
+        Route::get('create', array(
+          'as' => 'createUser',
+          function() {
+            return View::make('admin.user.create');
+          }
+
+        ));
+
+        // POST from create user page
+        Route::post('create', 'UserController@create');
+
+        // Get edit user page
+        Route::get('edit/{user}', array(
+          'as' => 'editUser',
+          'uses' => 'UserController@edit'
+        ));
+
+        // POST from edit user page
+        Route::post('edit/{user}', array(
+          'as' => 'editUser',
+          'uses' => 'UserController@save'
+        ));
+
+        // Get delete post page
+        Route::get('delete/{user}', array(
+          'as' => 'deleteUser',
+          'uses' => 'UserController@showDelete'
+        ));
+
+        // POST from delete post page
+        Route::post('delete/{user}', array(
+          'as' => 'deleteUser',
+          'uses' => 'UserController@delete'
+        ));
+      });
+
+      // Route prefix of comment
+      Route::group(array('prefix' => 'comment'), function() {
+
+        // Get delete comment page
+        Route::get('delete/{comment}', array(
+          'as' => 'deleteComment',
+          'uses' => 'CommentController@showDelete'
+        ));
+
+        // POST from delete comment page
+        Route::post('delete/{comment}', array(
+          'as' => 'deleteComment',
+          'uses' => 'CommentController@delete'
+        ));
+      });
+
+      // Moderate posts
+      Route::get('posts', array(
+        'as' => 'modPosts',
+        'uses' => 'PostController@listPosts'
+      ));
+
+      // Moderate Users
+      Route::get('users', array(
+        'as' => 'modUsers',
+        'uses' => 'UserController@listUsers'
+      ));
+    });
+  });
 });

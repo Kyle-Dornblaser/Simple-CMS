@@ -15,11 +15,9 @@ class CreatePosts extends Migration {
 			$table -> increments('id');
 			$table -> string('title', 128);
 			$table -> binary('content'); //BLOB equivalent
-			$table -> integer('category_id') -> unsigned();
 			$table -> string('user_id', 64);
 			$table -> timestamps();
 			
-			$table -> foreign('category_id') -> references('id') -> on('categories') -> onDelete('cascade');
 			$table -> foreign('user_id') -> references('id') -> on('users') -> onDelete('cascade');
 			
 			$table -> engine = 'InnoDB';

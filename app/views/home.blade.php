@@ -30,7 +30,7 @@ Web Coding Tutorials
 
 <h1><a href="{{ route('showPost', array('id' => $post -> id)) }}">{{ $post -> title }}</a></h1>
 <p class="lead">
-	by <a href="">{{ $post -> user -> first_name . ' ' . $post -> user -> last_name }}</a>
+	by <a href="{{ route('showUser', array('id' => $post -> user_id)) }}">{{ $post -> user -> first_name . ' ' . $post -> user -> last_name }}</a>
 </p>
 <hr>
 <p>

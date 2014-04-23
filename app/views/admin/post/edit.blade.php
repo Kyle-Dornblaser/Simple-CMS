@@ -17,11 +17,7 @@ Edit Post
 </div>
 <div class="form-group">
 	{{ Form::label('tags', 'Tags', array('control-label')) }}
-	{{ Form::text('tags', PostController::tagsString($post), array('class' => 'form-control input-lg', 'placeholder' => 'Comma separated tags. Ex: HTML, CSS, PHP')) }}
-</div>
-<div class="form-group">
-	{{ Form::label('category', 'Category', array('control-label')) }}
-	{{ Form::select('category', array('L' => 'Large', 'S' => 'Small'), $post -> category, array('class' => 'form-control')) }}
+	{{ Form::text('tags', PostController::tagsString($post), array('class' => 'form-control input-lg', 'placeholder' => 'Space separated tags. Ex: HTML CSS PHP')) }}
 </div>
 <div class="form-group">
 	<button type="submit" class="btn btn-primary">

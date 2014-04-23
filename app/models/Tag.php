@@ -3,7 +3,7 @@
 class Tag extends Eloquent {
 	protected $table = 'tags';
 
-	public function artist() {
+	public function posts() {
 		return $this -> belongsToMany('Post');
 	}
 

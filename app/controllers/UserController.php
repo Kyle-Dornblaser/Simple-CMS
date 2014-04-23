@@ -54,7 +54,7 @@ class UserController extends BaseController {
 		$password = Input::get('password');
 		$confirm_password = Input::get('confirm_password');
 
-		// Attempt to saved a new user to the database
+		// Attempt to save a new user to the database
 		if (strcmp($password, $confirm_password) == 0) {
 			$hashed_password = Hash::make($password);
 			try {
@@ -88,11 +88,12 @@ class UserController extends BaseController {
 		));
 	}
 
+	// get all users and send them to admin moderate user page
 	public function listUsers() {
 		$users = User::all() -> reverse();
 		return View::make('admin.users', compact('users'));
 	}
-
+	// create a new user
 	public function create() {
 		$first_name = Input::get('first_name');
 		$last_name = Input::get('last_name');
@@ -116,10 +117,12 @@ class UserController extends BaseController {
 		));
 	}
 
+	// create a view with a users information for editing
 	public function edit(User $user) {
 		return View::make('admin.user.edit', compact('user'));
 	}
 
+	// save changes to a user
 	public function save(User $user) {
 		$email = Input::get('email');
 		$first_name = Input::get('first_name');
@@ -145,10 +148,12 @@ class UserController extends BaseController {
 		));
 	}
 
+	// create the delete view to confirm deletion
 	public function showDelete(User $user) {
 		return View::make('admin.user.delete', compact('user'));
 	}
 
+	// delete a user from the database
 	public function delete(User $user) {
 
 		try {
@@ -166,6 +171,20 @@ class UserController extends BaseController {
 			'alert' => "You have successfully deleted user $userId.",
 			'alert-class' => 'alert-success'
 		));
+	}
+	
+	// get posts written by a given user
+	public function showPosts(User $user) {
+		$posts = Post::where('user_id', $user -> id) -> get();
+		return View::make('home', compact('posts'));
+	}
+	
+	// get the full name of a user by giving the user id
+	// this is helpful for when you have a foreign key of user_id and need further information
+	public static function fullName($id) {
+		$user = User::findOrFail($id);
+		$fullName = $user -> first_name . ' ' . $user -> last_name;
+		return $fullName;
 	}
 
 }

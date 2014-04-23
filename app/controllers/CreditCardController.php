@@ -2,6 +2,7 @@
 
 class CreditCardController extends BaseController {
 
+	// save a credit card to the database
 	public function save() {
 		$first_name = Input::get('first_name');
 		$last_name = Input::get('last_name');
@@ -23,12 +24,11 @@ class CreditCardController extends BaseController {
 		$user = Auth::user();
 		//don't want to overwrite our admins
 		if ($user -> role != 'Admin') {
-			$user -> role = 'Premium';
+			$user -> role = 'Premium'; // change role to admin
 			$user -> save();
 		}
 
 		return Redirect::intended('/') -> with(array('alert' => 'Congrats! You are now a premimum member.', 'alert-class' => 'alert-info'));
-
 	}
 
 }

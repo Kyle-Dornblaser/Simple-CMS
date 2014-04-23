@@ -10,11 +10,9 @@ class PostController extends BaseController {
 		$title = Input::get('title');
 		$content = Input::get('content');
 		$tags = explode(' ', Input::get('tags'));
-		$category = Input::get('category');
 
 		$post -> title = $title;
 		$post -> content = $content;
-		$post -> category_id = 1;
 		$post -> user_id = Auth::user() -> id;
 		$post -> save();
 
@@ -30,7 +28,7 @@ class PostController extends BaseController {
 					$post -> tags() -> save($tag);
 				}
 			// tag is not in the database
-			} else {
+			} else if($tagName != ' ' && $tagName != '') {
 				$tag = new Tag;
 				$tag -> id = $tagName;
 				$tag -> save();
