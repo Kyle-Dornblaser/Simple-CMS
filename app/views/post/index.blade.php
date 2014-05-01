@@ -58,7 +58,7 @@
 	@if(Auth::user() -> role == 'Admin') <a href="{{ route('deleteComment', array('id' => $comment -> id)) }}" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a> 
 	@endif
 	@endif
-	{{ UserController::fullName($comment -> user_id) }}<small> {{ date('F j, Y \a\t g:i A', strtotime($post -> created_at)) }}</small></h3> 
+	{{ UserController::fullName($comment -> user_id) }}<small> {{ date('F j, Y \a\t g:i A', strtotime($comment -> created_at)) }}</small></h3> 
 	<p>
 		{{ $comment -> content }}
 	</p> @endforeach </span>

@@ -16,9 +16,9 @@
 		<link href="{{ asset('css/blog-post.css') }}" rel="stylesheet">
 
 		<!--<style>
-			h1 a, h1 a:hover {
-				color: #000;
-			}
+		h1 a, h1 a:hover {
+		color: #000;
+		}
 		</style>-->
 	</head>
 	<body>
@@ -99,12 +99,19 @@
 
 			<footer>
 				<div class="row">
-					<div class="col-sm-12">
-						<p>
-							Copyright &copy; Coding-Tuts 2014
-						</p>
+					<div class="col-sm-4">
 						<p>
 							<a href="https://github.com/Kyle-Dornblaser/Web-Development-Team">GitHub</a>
+						</p>
+					</div>
+					<div class="col-sm-4">
+						<p>
+							<a href="{{ asset('images/erd.svg') }}">ER Diagram</a>
+						</p>
+					</div>
+					<div class="col-sm-4">
+						<p>
+							Copyright &copy; Coding-Tuts 2014
 						</p>
 					</div>
 				</div>
