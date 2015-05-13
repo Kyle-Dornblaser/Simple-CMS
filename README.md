@@ -1,4 +1,4 @@
-Web-Development-Team
+Simple-CMS
 ====================
 
 Credits
